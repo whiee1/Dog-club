@@ -1,0 +1,23 @@
+<%- include('nav') %>
+
+<form class="sort_btn" action="/members/sortAtoZ" method="get" >
+  <button>sortAtoZ</button>
+</form>
+<form class="sort_btn"action="/members/sortZtoA" method="get" >
+  <button>sortZtoA</button>
+    </form>
+    
+  
+<ul class="membars_ul">
+  <% members.forEach((member) => { %>
+   <li>
+      <a href="/member/<%= member._id %>"> 
+      <%= member.name%>
+      </a>
+    </li>
+    <% }); %>
+</ul>
+
+
+
+<%- include('footer') %>

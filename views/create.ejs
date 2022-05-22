@@ -1,0 +1,18 @@
+<%- include('nav') %>
+  
+  <form action="/members/create" method="post" class="create_member">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <label for="breed">Breed:</label>
+    <input type="text" id="breed" name="breed">
+    <label for="mail">E-mail:</label>
+    <input type="text" id="mail" name="mail">
+    <label for="phonenumber">Phone number:</label>
+    <input type="number" id="phonenumber" name="phonenumber">
+    <button>Add member</button>
+  </form>
+
+
+
+
+<%- include('footer') %>

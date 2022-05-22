@@ -1,0 +1,27 @@
+<%- include('nav') %>
+  
+  <h1><%= name %> </h1>
+  <p>Breed: <%= breed %></p>
+  <p>E-mail: <%= mail %></p>
+  <p>Phonenumber: <%= phonenumber %></p>
+  <p>Member since: <%= joined %></p>
+
+  <form action="/member/delete/<%= _id %>" method="post" >
+<button>Delete member</button>
+  </form>
+
+  <form class="update_form" action="/member/<%= _id%>/update" method="post">
+    <button>Change member information</button> 
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= name %>">
+    <label for="breed">Breed:</label>
+    <input type="text" id="breed" name="breed" value="<%= breed %>">
+    <label for="mail">E-mail:</label>
+    <input type="text" id="mail" name="mail" value="<%= mail %>"> 
+    <label for="phonenumber">Phonenumber:</label>
+    <input type="text" id="phonenumber" name="phonenumber" value="<%= phonenumber %>"> <br>
+    <br />
+    
+  </form>
+  
+  <%- include('footer') %>
